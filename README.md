@@ -27,7 +27,7 @@ sudo apt install -y qt6-base-dev libqt6widgets6
 sudo apt install -y python3-colcon-meson 
 ```
 
-## 2. Create ROS2 workspace (if you alredy haven't).
+## 2. Create ROS2 workspace (if you already haven't).
 
 Create standard folder structure for ros2_ws.
 
@@ -52,7 +52,7 @@ git clone https://github.com/christianrauch/camera_ros.git
 ## 4. Building.
 Install any remaining ROS dependencies and build the packages. Note that `camera_ros` will automatically link against our local `libcamera` build.
 
-Whille being in `~/ros2_ws`:
+While being in `~/ros2_ws`:
 
 ```bash
 # Check for missing dependencies
@@ -63,7 +63,7 @@ colcon build --packages-select libcamera camera_ros
 ```
 
 **Hint:**
-Make shure that your hardware setup is correct, CSI camera port is enabled. (It should be by default).
+Make sure that your hardware setup is correct, CSI camera port is enabled. (It should be by default).
 
 ## 5. Running the Camera Node (On Raspberry PI).
 
@@ -76,10 +76,10 @@ ros2 run camera_ros camera_node
 ```
 
 **Warning:**
-After running node you will propably get load of `INFO` and `WARNING` logs. Don't mind them as long as there are is no `FATAL/ERROR`. The easiest test is to just test it using ROS2's `topic list` command.
+After running node you will probably get load of `INFO` and `WARNING` logs. Don't mind them as long as there are is no `FATAL/ERROR`. The easiest test is to just test it using ROS2's `topic list` command.
 
 **Hint:**
-You may encounter `ERROR` coresponding to calibration files, but since it's your first test and you haven't created them it isn't a problem.
+You may encounter `ERROR` corresponding to calibration files, but since it's your first test and you haven't created them it isn't a problem.
 
 ```bash
 ros2 topic list
@@ -95,7 +95,7 @@ ros2 topic list
 
 To view the video stream on your laptop (connected to the same Wi-Fi):
 
-#### 1. Make shure you have instaled `rqt_image_view`.
+### 1. Make sure you have installed `rqt_image_view`.
 
 ```bash
 sudo apt install ros-jazzy-rqt-image-view ros-jazzy-image-transport-plugins
@@ -108,7 +108,7 @@ source /opt/ros/jazzy/setup.bash
 ros2 run rqt_image_view rqt_image_view
 ```
 
-### 3. Select topic from dropdwon menu (left top corner):
+### 3. Select topic from dropdown menu (left top corner):
 
 Select `/camera/image_raw/compressed`. 
 
