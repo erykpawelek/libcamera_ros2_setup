@@ -43,10 +43,10 @@ Clone the specific Raspberry Pi fork of `libcamera` and the ROS 2 camera node.
 cd ~/ros2_ws/src
 
 # 1. Clone the RPi fork of libcamera
-git clone [https://github.com/raspberrypi/libcamera.git](https://github.com/raspberrypi/libcamera.git)
+git clone https://github.com/raspberrypi/libcamera.git
 
 # 2. Clone the ROS 2 camera node wrapper
-git clone [https://github.com/christianrauch/camera_ros.git](https://github.com/christianrauch/camera_ros.git)
+git clone https://github.com/christianrauch/camera_ros.git
 ```
 
 ## 4. Building.
@@ -112,7 +112,7 @@ ros2 run rqt_image_view rqt_image_view
 
 Select `/camera/image_raw/compressed`. 
 
-## 8. Common Issues & Troubleshooting (Viewing image).
+## 7. Common Issues & Troubleshooting (Viewing image).
 
 ### `rqt_image_view` Crashing or Freezing
 **Symptoms:** The application closes unexpectedly with `invalid allocator` error or freezes when refreshing the topic list.
